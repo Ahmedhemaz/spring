@@ -26,6 +26,8 @@
           class="com.spring.CricketCoach">
         <!-- set up setter injection -->
         <property name="fortuneService" ref="happyFortune"/>
+        <property name="emailAddress" value="a@a.com"/>
+        <property name="teamName" value="elmazareta"/>
     </bean>
 
 </beans>
