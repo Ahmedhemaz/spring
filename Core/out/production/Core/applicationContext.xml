@@ -8,10 +8,21 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- Define your beans here -->
-    <bean id="baseballCoach" class="com.spring.BaseballCoach">
+    <!-- create fortune bean  -->
+    <bean id="happyFortune" class="com.spring.HappyFortuneService">
+    </bean>
+
+    <!-- create coaches beans -->
+    <bean id="baseballCoach"
+          class="com.spring.BaseballCoach">
+        <!-- set up constructor injection for baseball coach -->
+        <constructor-arg ref="happyFortune"/>
     </bean>
     <bean id="trackCoach" class="com.spring.TrackCoach">
+        <!-- set up constructor injection for track coach -->
+        <constructor-arg ref="happyFortune"/>
     </bean>
+
 </beans>
 
 
