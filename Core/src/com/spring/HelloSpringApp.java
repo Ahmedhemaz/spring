@@ -14,12 +14,16 @@ public class HelloSpringApp {
 
         ICoach baseBallCoach = context.getBean("baseballCoach", ICoach.class);
         ICoach trackCoach = context.getBean("trackCoach", ICoach.class);
+        ICoach cricketCoach = context.getBean("cricketCoach", ICoach.class);
+
         // call methods on the bean
 
         System.out.println(baseBallCoach.getDailyWorkout());
         System.out.println(baseBallCoach.getDailyFortune());
         System.out.println(trackCoach.getDailyWorkout());
         System.out.println(trackCoach.getDailyFortune());
+        System.out.println(cricketCoach.getDailyWorkout());
+        System.out.println(cricketCoach.getDailyFortune());
 
         // close the context
 

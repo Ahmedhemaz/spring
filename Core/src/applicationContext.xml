@@ -22,6 +22,11 @@
         <!-- set up constructor injection for track coach -->
         <constructor-arg ref="happyFortune"/>
     </bean>
+    <bean id="cricketCoach"
+          class="com.spring.CricketCoach">
+        <!-- set up setter injection -->
+        <property name="fortuneService" ref="happyFortune"/>
+    </bean>
 
 </beans>
 
